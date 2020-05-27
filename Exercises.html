@@ -75,7 +75,7 @@
       clear: both;
       display: table;
     }
-
+/* Features specifically for the FLIP BOX */
    
 .flip-box {
   background-color: ;
@@ -116,7 +116,43 @@
   color: white;
   transform: rotateY(180deg);
 }     
+/* Features specifically for the GRID */
 
+.wrapper {
+            display: grid;
+
+            /*********** Different options for columns ***********/
+            /* grid-template-columns: 500px 500px; */ 
+            /* grid-template-columns: 500px 1fr 2fr; */
+            /* grid-template-columns: repeat(2, 1fr); */
+            grid-template-columns: 1fr 1fr 1fr; /* The page width is two equal halves by using fraction proportions */
+
+            /*********** Different options for rows ***********/
+            /* grid-auto-rows: 200px;  Each row is 200 pixels tall including the topmost row */
+            grid-auto-rows: minmax(100px, auto); /* Each row is a min height of 100 pixels, but will "auto-stretch" */
+            grid-gap: 5px;
+            background-color: coral;
+            padding: 5px;
+        }
+
+
+        /* These features would apply to any "div" that is used in the grid "wrapper" */
+        .wrapper > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px 10px;
+            font-size: 18px;
+
+        /* This feature is still under construction
+        .box1 { 
+            grid-column-start: 1; 
+            grid-column-end: 3; 
+            grid-row-start: 1; 
+            grid-row-end: 3; 
+        } */
+       
+}
+        
     </style>
 
 
@@ -136,37 +172,57 @@
   <header style="font-weight:bold;">Exercises</header>
 </div>
 
+<div class="wrapper">
 
-
-
-<center>
- <div class="row">
- <div class="flip-box">
+            <!-- The "div" markers fillout the grid areas starting from left to right -->
+            <div>Exercises</div>
+<div class="flip-box">
    <div class="flip-box-inner">
      <div class="flip-box-front">
        <img src="exercises1.jpg" style="width:450px;height:350px">
     </div>
 
     <div class="flip-box-back">
-      <h2>Facts</h2>
+      <h3>Facts</h3>
     
 <p>-Exercising improves brain performance. </p>
 <p>-Working out sharpens your memory. </p>
 <p>-Running burns calories.</p>
 <p>-More muscle mass = burning more fat while resting. </p>
 <p>-Exercise prevents signs of ageing. </p>
-<p>-A pound of muscle burns three times more calories than a pound of fat. </p>
 <p>-You get sick less often. </p>
 <p>-Increases productivity.</p>
     </div>
   </div>
 </div>   
 
+        
+            <div>Streches</div>
+            <div>
+<p>Burpee. Stand with your feet shoulder-width apart. </p>
+<p>Jackknife Sit-Up. </p>
+<p>Mountain Climber.</p>
+<p>Oblique Crunch. </p>
+<p>Plank. </p>
+<p>Dead Bug.</p>
 
+<p>Mountain climbers. </p>
+<p>Wall squats. </p>
+<p>High-knee sprints. </p>
+<p>Chest press. </p>
+<p>Butt kicks. </p>
+<p>T push-up against a wall. </p>
+<p>Supermans.</p>
 
-<center>
- <div class="row">
- <div class="flip-box">
+<p>Reverse Lunges, 6 reps per side. Reverse lunges help strengthen your thighs and hips. </p>
+<p>Lateral Split Squats, 6 reps per side. </p>
+<p>Pushups, 10 reps. </p>
+<p>Hip Bridges, 10 reps. </p>
+<p>Mountain Climbers, 30 seconds.</p>
+
+</div>
+
+            <div> <div class="flip-box">
    <div class="flip-box-inner">
      <div class="flip-box-front">
        <img src="exercises.jpg" style="width:450px;height:350px">
@@ -178,6 +234,23 @@
     </div>
   </div>
 </div>   
+</div>
+
+            <div>
+<p>Quad Stretch. </p>
+<p>Hamstring Stretch. </p>
+<p>Thigh Stretch. </p>
+<p>Hip Stretch. </p>
+<p>Chest and Shoulder Stretch. </p>
+<p>Upper Back Stretch. </p>
+<p>Bicep Stretch. </p>
+<p>Tricep Stretch.</p>
+            </div>
+    </div>
+
+
+
+
 
 
 

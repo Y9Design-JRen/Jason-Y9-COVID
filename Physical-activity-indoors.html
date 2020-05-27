@@ -22,10 +22,7 @@
         }
 
         /* Features specifically for the "p" tag */
-        p.features {
-        text-align: center;
-        color: blue;
-        }
+
 
         /* Features that apply to the whole body */
         body {
@@ -107,7 +104,40 @@
   color: white;
   transform: rotateY(180deg);
 }
+ .wrapper {
+            display: grid;
 
+            /*********** Different options for columns ***********/
+            /* grid-template-columns: 500px 500px; */ 
+            /* grid-template-columns: 500px 1fr 2fr; */
+            /* grid-template-columns: repeat(2, 1fr); */
+            grid-template-columns: 1fr 1fr 1fr; /* The page width is two equal halves by using fraction proportions */
+
+            /*********** Different options for rows ***********/
+            /* grid-auto-rows: 200px;  Each row is 200 pixels tall including the topmost row */
+            grid-auto-rows: minmax(100px, auto); /* Each row is a min height of 100 pixels, but will "auto-stretch" */
+            grid-gap: 5px;
+            background-color: coral;
+            padding: 5px;
+        }
+
+
+        /* These features would apply to any "div" that is used in the grid "wrapper" */
+        .wrapper > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px 10px;
+            font-size: 18px;
+
+        /* This feature is still under construction
+        .box1 { 
+            grid-column-start: 1; 
+            grid-column-end: 3; 
+            grid-row-start: 1; 
+            grid-row-end: 3; 
+        } */
+
+        
 }
 </style>
 </head>
@@ -133,19 +163,20 @@
   <header style="font-weight:bold;">Physical activity indoors</header>
 </div>
 
+<div class="wrapper">
 
+            <!-- The "div" markers fillout the grid areas starting from left to right -->
+            <div>What is physical activity?</div>
+            <div>
 
-<center>
- <div class="row">
- <div class="flip-box">
-   <div class="flip-box-inner">
-     <div class="flip-box-front">
-       <img src="Physical-activity-indoors.jpg" style="width:450px;height:350px">
-    </div>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="Physical-activity-indoors.jpg" style="width:450px;height:350px">
+                        </div>
 
-    <div class="flip-box-back">
-    
-<h2>The benefits of regular exercise are:</h2>
+                        <div class="flip-box-back">
+                            <h3>The benefits of regular exercise are:</h3>
 
 <p>-Reduce your risk of a heart attack.</p>
 <p>-Manage your weight better.</p>
@@ -153,17 +184,32 @@
 <p>-Lower the risk of type 2 diabetes and some cancers.</p>
 <p>-Have lower blood pressure.</p>
 <p>-Have stronger bones, muscles and joints and lower risk of developing osteoporosis. </p>
-    </div>
-  </div>
-</div>   
+                        
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div>Strengthen Your Bones and Muscles</div>
+            <div>The World heath organization(WHO) defines physical activity as any bodily movement produced by skeletal muscles that requires energy expenditure – including activities undertaken while working, playing, carrying out household chores, travelling, and engaging in recreational pursuits.
+
+The term "physical activity" should not be confused with "exercise", which is a subcategory of physical activity that is planned, structured, repetitive, and aims to improve or maintain one or more components of physical fitness. Beyond exercise, any other physical activity that is done during leisure time, for transport to get to and from places, or as part of a person’s work, has a health benefit. Further, both moderate- and vigorous-intensity physical activity improve health.</div>
+
+    <!-- This is my youtube video in my grid -->      
+            <div>
 
 <iframe width="450" height="315"
 src=" https://www.youtube.com/embed/-lxg-35Xo_o ">
-</iframe>
-</html>
+</iframe></div>
+
+            <div>As you age, it’s important to protect your bones, joints, and muscles – they support your body and help you move. Keeping bones, joints, and muscles healthy can help ensure that you’re able to do your daily activities and be physically active. Doing aerobic, muscle-strengthening, and bone-strengthening physical activity at a moderately-intense level can slow the loss of bone density that comes with age.
+            </div>
+    </div>
+
 
 </center>
+
 
 
   
